@@ -19,10 +19,3 @@ export const services = [
   { name: "Suspensão", description: "Avaliação de amortecedores, buchas e componentes da suspensão." },
   { name: "Freios", description: "Verificação de pastilhas, discos e componentes do sistema." },
 ] as const;
-
-export const vehicleOptions = [
-  { brand: "Chevrolet", models: ["Agile", "Corsa Classic", "Montana", "Onix", "Onix Plus", "Opala", "Prisma", "S-10"] },
-  { brand: "Fiat", models: ["Ducato", "Palio", "Siena", "Strada"] },
-  { brand: "Toyota", models: ["Bandeirante", "Corolla"] },
-  { brand: "Volkswagen", models: ["CrossFox", "Fox", "Santana", "Virtus"] },
-] as const;

@@ -22,7 +22,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="header-inner">
         <Link href="/" className="brand" aria-label="Auto Peças Martins, página inicial">
-          <Image src="/images/logo-apm-clean.png" alt="" width={56} height={56} priority />
+          <Image src="/images/logo-apm-header-white.png" alt="" width={56} height={56} priority />
           <span><strong>AUTO PEÇAS</strong><small>MARTINS · JACUPIRANGA</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Navegação principal">{links.slice(0, 4).map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}</nav>
