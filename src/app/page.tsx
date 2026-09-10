@@ -6,12 +6,12 @@ import { SiteHeader } from "@/components/site-header";
 import { VehicleFinder } from "@/components/vehicle-finder";
 import { WhatsAppLink } from "@/components/whatsapp-link";
 import { ArrowRight, Car, ChevronRight, Clock, Package, ShieldCheck } from "@/components/icons";
-import { catalogProducts, categories } from "@/lib/catalog";
+import { categories } from "@/lib/catalog";
+import { getPublicCatalog } from "@/lib/catalog-db";
 import { services, store } from "@/lib/store";
 
-const featured = catalogProducts.slice(0, 4);
-
-export default function HomePage() {
+export default async function HomePage() {
+  const featured = await getPublicCatalog();
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "AutoPartsStore",
@@ -36,3 +36,4 @@ export default function HomePage() {
     <SiteFooter />
   </main>;
 }
+
