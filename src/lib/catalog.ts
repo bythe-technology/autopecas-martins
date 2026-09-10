@@ -17,6 +17,7 @@ export type CatalogProduct = {
   application: string;
   description: string;
   imageSrc?: string;
+  imageNote?: string;
   fitment?: { make: string; models: string[]; yearFrom?: number; yearTo?: number };
 };
 
@@ -53,9 +54,12 @@ const researchedProductImages: Record<string, string> = {
   "retrovisor-agile-montana-controle-ld": "/images/products/retrovisor-agile-montana-controle-ld.jpg",
   "retrovisor-onix-prisma-novo-controle-ld": "/images/products/retrovisor-onix-prisma-novo-controle-ld.jpg",
   "retrovisor-palio-strada-sem-controle-ld": "/images/products/retrovisor-palio-strada-sem-controle-ld.jpg",
+  "grade-corsa-classic-moldura-cromada": "/images/products/grade-corsa-classic-moldura-cromada-ilustrativa.png",
+  "moldura-lama-strada-12-14-traseiro-ld": "/images/products/moldura-lama-strada-12-14-traseiro-ld.jpg",
   "para-barro-onix-prisma-13-16-le": "/images/products/para-barro-onix-prisma-13-16-le.jpg",
   "para-barro-corsa-classic-10-14-ld": "/images/products/para-barro-corsa-classic-10-14-ld.jpg",
   "borracha-porta-ducato-dianteira": "/images/products/borracha-porta-ducato-dianteira.jpg",
+  "guarnicao-brisa-bandeirantes": "/images/products/guarnicao-brisa-bandeirantes-ilustrativa.png",
   "calha-corolla-sedan-08-14": "/images/products/calha-corolla-sedan-08-14.jpg",
 };
 
@@ -83,6 +87,7 @@ const researchedFitments: Record<string, NonNullable<CatalogProduct["fitment"]>>
 export const catalogProducts: CatalogProduct[] = catalogProductData.map((product) => ({
   ...product,
   imageSrc: researchedProductImages[product.slug],
+  imageNote: ["grade-corsa-classic-moldura-cromada", "moldura-lama-strada-12-14-traseiro-ld", "guarnicao-brisa-bandeirantes"].includes(product.slug) ? "Imagem ilustrativa" : undefined,
   fitment: researchedFitments[product.slug],
 }));
 
