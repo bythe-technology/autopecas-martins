@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Close, Menu, MessageCircle } from "./icons";
+import { Close, Menu, WhatsAppIcon } from "./icons";
 import { whatsappUrl } from "./whatsapp-link";
 
 const links = [
@@ -26,10 +26,10 @@ export function SiteHeader() {
           <span><strong>AUTO PEÇAS</strong><small>MARTINS · JACUPIRANGA</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Navegação principal">{links.slice(0, 4).map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}</nav>
-        <a className="header-whatsapp" href={contactUrl} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Falar no WhatsApp</a>
+        <a className="header-whatsapp" href={contactUrl} target="_blank" rel="noreferrer"><WhatsAppIcon size={18} /> Falar no WhatsApp</a>
         <button className="menu-toggle" type="button" aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>{open ? <Close size={24} /> : <Menu size={24} />}</button>
       </div>
-      {open && <nav className="mobile-nav" aria-label="Navegação móvel">{links.map((link) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}<a href={contactUrl} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Falar no WhatsApp</a></nav>}
+      {open && <nav className="mobile-nav" aria-label="Navegação móvel">{links.map((link) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}<a href={contactUrl} target="_blank" rel="noreferrer"><WhatsAppIcon size={18} /> Falar no WhatsApp</a></nav>}
     </header>
     <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
   </>;
