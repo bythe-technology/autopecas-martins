@@ -4,10 +4,12 @@ export const store = {
   phoneDisplay: "(13) 99600-2719",
   landlineDisplay: "(13) 3864-1821",
   whatsappE164: "5513996002719",
+  cnpj: "50.536.044/0001-09",
   city: "Jacupiranga",
   state: "SP",
   address: "Av. Hilda Mohring de Macedo, 1309 · Vila Elias",
   region: "Vale do Ribeira",
+  hours: ["Segunda a sexta · 8h às 18h", "Sábado · 8h às 12h"],
 } as const;
 
 export const services = [

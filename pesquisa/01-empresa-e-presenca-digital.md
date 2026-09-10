@@ -32,6 +32,12 @@ A empresa aparece em campanhas comerciais da ACEJA. Isso sugere afinidade com a�
 
 ## Canais e assets
 
+### Revisão de redes sociais — 10/09/2026
+
+Novas buscas por nome, cidade, CNPJ, telefone e combinações específicas em Instagram e Facebook não localizaram um perfil oficial verificável da Auto Peças Martins de Jacupiranga. Resultados de lojas homônimas em Piraju, Anápolis e outras cidades foram descartados. Uma loja na Shopee com o mesmo nome não apresenta, no resultado público consultado, endereço, CNPJ ou telefone suficientes para confirmar o vínculo.
+
+Decisão para o site: não publicar ícones ou links de redes sociais até a cliente fornecer os endereços oficiais ou confirmar um perfil encontrado. O footer informa de forma discreta que os perfis serão incluídos após confirmação.
+
 | Canal/asset | Resultado | Próxima ação |
 |---|---|---|
 | Logo | Encontrado e salvo da ACEJA | Confirmar versão e solicitar vetor/PNG original |

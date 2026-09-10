@@ -17,6 +17,7 @@ export default function HomePage() {
     "@type": "AutoPartsStore",
     name: store.name,
     telephone: store.phoneDisplay,
+    taxID: store.cnpj,
     address: { "@type": "PostalAddress", streetAddress: store.address, addressLocality: store.city, addressRegion: store.state, addressCountry: "BR" },
     areaServed: store.region,
   };
