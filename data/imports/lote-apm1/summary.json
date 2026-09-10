@@ -1,0 +1,19 @@
+{
+  "source": "docs\\fontes\\LOTES-APM1.pdf",
+  "sha256": "42301805ac407b3033ae93a6b03efb8d8683bf81afa7f79fff1a7fb2c1a62900",
+  "rows": 637,
+  "by_category": {
+    "Borracha e vedação": 131,
+    "Calhas": 39,
+    "Iluminação": 297,
+    "Retrovisores": 52,
+    "Molduras e grades": 103,
+    "Para-barros": 15
+  },
+  "by_confidence": {
+    "high": 498,
+    "medium": 139
+  },
+  "with_code": 498,
+  "total_cents": 6573970
+}
