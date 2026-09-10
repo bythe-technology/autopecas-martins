@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { ChangeEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Camera, ChevronRight, Package } from "./icons";
 import { categories } from "@/lib/catalog";
+import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
 type VehicleOption = { codigo: string | number; nome: string };
 type ImagePreview = { id: string; src: string; name: string };
@@ -18,6 +20,7 @@ async function fetchVehicleOptions(url: string, signal: AbortSignal): Promise<Ve
 }
 
 export function ProductForm() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [images, setImages] = useState<ImagePreview[]>([]);
   const [imageUrl, setImageUrl] = useState("");
@@ -29,6 +32,15 @@ export function ProductForm() {
   const [models, setModels] = useState<VehicleOption[]>([]);
   const [years, setYears] = useState<VehicleOption[]>([]);
   const [vehicleError, setVehicleError] = useState("");
+  const [name, setName] = useState("");
+  const [manufacturerCode, setManufacturerCode] = useState("");
+  const [partBrand, setPartBrand] = useState("");
+  const [price, setPrice] = useState("");
+  const [availability, setAvailability] = useState("available");
+  const [description, setDescription] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState("");
+  const [checks, setChecks] = useState([false, false, false]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -82,6 +94,18 @@ export function ProductForm() {
     } catch { setImageError("Cole um endereço completo começando com http:// ou https://."); }
   }
 
+  async function saveProduct(publish: boolean) {
+    setSaveError("");
+    const priceCents = Math.round(Number(price.replace(/[^0-9,.-]/g, "").replace(",", ".")) * 100);
+    if (name.trim().length < 2 || !Number.isInteger(priceCents) || priceCents <= 0) return setSaveError("Preencha o nome e um preço válido antes de salvar.");
+    if (publish && checks.some((checked) => !checked)) return setSaveError("Confirme os três itens da revisão antes de publicar.");
+    setSaving(true);
+    const { error } = await createSupabaseBrowserClient().rpc("admin_create_product", { product_name: name.trim(), manufacturer_code: manufacturerCode.trim(), product_brand: partBrand.trim(), product_description: description.trim(), product_price_cents: priceCents, product_availability: availability, publish_now: publish });
+    setSaving(false);
+    if (error) return setSaveError("Não foi possível salvar a peça. Confira os campos e tente novamente.");
+    router.push("/admin/produtos"); router.refresh();
+  }
+
   return <div className="product-form">
     <div className="form-steps">{["Fotos", "Informações", "Revisar"].map((label, index) => <button type="button" key={label} className={step === index + 1 ? "active" : step > index + 1 ? "done" : ""} onClick={() => setStep(index + 1)}><span>{index + 1}</span>{label}</button>)}</div>
     {step === 1 && <section className="form-card"><p className="eyebrow">ETAPA 1 DE 3</p><h2>Adicione fotos da peça</h2><p>A primeira foto será a capa. No celular, você pode fotografar a peça na hora ou escolher uma imagem da galeria.</p>
@@ -93,9 +117,9 @@ export function ProductForm() {
       {imageError && <p className="form-error" role="alert">{imageError}</p>}
       {images.length > 0 && <div className="image-previews">{images.map((image, index) => <figure key={image.id}><Image src={image.src} alt={image.name} fill unoptimized sizes="140px" /><figcaption>{index === 0 ? "CAPA" : `FOTO ${index + 1}`}</figcaption><button type="button" aria-label={`Remover ${image.name}`} onClick={() => setImages((current) => current.filter((item) => item.id !== image.id))}>×</button></figure>)}</div>}
       <div className="form-actions"><span /><button type="button" className="button button-primary" onClick={() => setStep(2)}>Continuar <ChevronRight /></button></div></section>}
-    {step === 2 && <section className="form-card"><p className="eyebrow">ETAPA 2 DE 3</p><h2>Informações da peça</h2><p>Preencha o que souber. A base FIPE completa está disponível aqui para cadastrar novas compatibilidades.</p><div className="form-grid"><label className="wide"><span>Nome da peça</span><input placeholder="Ex.: Farol Santana com auxiliar - LE" /></label><label><span>Código interno</span><input placeholder="Gerado automaticamente" disabled /></label><label><span>Código do fabricante</span><input placeholder="Ex.: FG51LD" /></label><label><span>Categoria</span><select defaultValue=""><option value="" disabled>Selecione</option>{categories.map((category) => <option key={category}>{category}</option>)}</select></label><label><span>Marca da peça</span><input placeholder="Ex.: Rufato" /></label><label><span>Preço</span><input inputMode="decimal" placeholder="R$ 0,00" /></label><label><span>Disponibilidade</span><select><option>Disponível</option><option>Últimas unidades</option><option>Sob consulta</option><option>Esgotado</option></select></label>
+    {step === 2 && <section className="form-card"><p className="eyebrow">ETAPA 2 DE 3</p><h2>Informações da peça</h2><p>Preencha o que souber. A base FIPE completa está disponível aqui para cadastrar novas compatibilidades.</p><div className="form-grid"><label className="wide"><span>Nome da peça</span><input value={name} onChange={(event) => setName(event.target.value)} placeholder="Ex.: Farol Santana com auxiliar - LE" /></label><label><span>Código interno</span><input placeholder="Gerado automaticamente" disabled /></label><label><span>Código do fabricante</span><input value={manufacturerCode} onChange={(event) => setManufacturerCode(event.target.value)} placeholder="Ex.: FG51LD" /></label><label><span>Categoria</span><select defaultValue=""><option value="" disabled>Selecione</option>{categories.map((category) => <option key={category}>{category}</option>)}</select></label><label><span>Marca da peça</span><input value={partBrand} onChange={(event) => setPartBrand(event.target.value)} placeholder="Ex.: Rufato" /></label><label><span>Preço</span><input value={price} onChange={(event) => setPrice(event.target.value)} inputMode="decimal" placeholder="R$ 0,00" /></label><label><span>Disponibilidade</span><select value={availability} onChange={(event) => setAvailability(event.target.value)}><option value="available">Disponível</option><option value="limited">Últimas unidades</option><option value="on_request">Sob consulta</option><option value="out_of_stock">Esgotado</option></select></label>
         <div className="vehicle-application-fields"><h3>Compatibilidade do veículo</h3><p>Selecione na base FIPE completa.</p><div className="vehicle-application-grid"><label><span>Marca</span><select value={brandCode} onChange={(event) => setBrandCode(event.target.value)}><option value="">Selecione</option>{brands.map((item) => <option key={item.codigo} value={item.codigo}>{item.nome}</option>)}</select></label><label><span>Modelo</span><select value={modelCode} disabled={!brandCode} onChange={(event) => setModelCode(event.target.value)}><option value="">Selecione</option>{models.map((item) => <option key={item.codigo} value={item.codigo}>{item.nome}</option>)}</select></label><label><span>Ano</span><select value={yearCode} disabled={!modelCode} onChange={(event) => setYearCode(event.target.value)}><option value="">Todos os anos compatíveis</option>{years.map((item) => <option key={item.codigo} value={item.codigo}>{item.nome}</option>)}</select></label></div>{vehicleError && <p className="form-error" role="alert">{vehicleError}</p>}<button type="button" className="text-link" disabled={!brandCode || !modelCode}>+ Adicionar compatibilidade</button></div>
-        <label className="wide"><span>Descrição</span><textarea rows={4} placeholder="Detalhes importantes, lado, unidade ou kit..." /></label></div><div className="form-actions"><button type="button" className="button button-ghost" onClick={() => setStep(1)}>Voltar</button><button type="button" className="button button-primary" onClick={() => setStep(3)}>Revisar <ChevronRight /></button></div></section>}
-    {step === 3 && <section className="form-card"><p className="eyebrow">ETAPA 3 DE 3</p><h2>Revise antes de publicar</h2><div className="preview-card"><span>{images[0] ? <Image src={images[0].src} alt="Capa escolhida" width={72} height={72} unoptimized /> : <Package size={42} />}</span><div><small>Prévia do produto</small><strong>Sua peça aparecerá aqui</strong><p>Confira fotos, preço, código e aplicação antes de deixar o anúncio visível.</p></div></div><div className="review-checks"><label><input type="checkbox" /> Confirmei o preço</label><label><input type="checkbox" /> Confirmei a aplicação</label><label><input type="checkbox" /> Confirmei a disponibilidade</label></div><div className="form-actions"><button type="button" className="button button-ghost" onClick={() => setStep(2)}>Voltar</button><div><button type="button" className="button button-ghost">Salvar rascunho</button><button type="button" className="button button-primary">Publicar peça</button></div></div></section>}
+        <label className="wide"><span>Descrição</span><textarea value={description} onChange={(event) => setDescription(event.target.value)} rows={4} placeholder="Detalhes importantes, lado, unidade ou kit..." /></label></div><div className="form-actions"><button type="button" className="button button-ghost" onClick={() => setStep(1)}>Voltar</button><button type="button" className="button button-primary" onClick={() => setStep(3)}>Revisar <ChevronRight /></button></div></section>}
+    {step === 3 && <section className="form-card"><p className="eyebrow">ETAPA 3 DE 3</p><h2>Revise antes de publicar</h2><div className="preview-card"><span>{images[0] ? <Image src={images[0].src} alt="Capa escolhida" width={72} height={72} unoptimized /> : <Package size={42} />}</span><div><small>Prévia do produto</small><strong>{name || "Sua peça aparecerá aqui"}</strong><p>{price ? `Preço informado: R$ ${price}` : "Confira fotos, preço, código e aplicação antes de deixar o anúncio visível."}</p></div></div><div className="review-checks">{["Confirmei o preço", "Confirmei a aplicação", "Confirmei a disponibilidade"].map((label, index) => <label key={label}><input type="checkbox" checked={checks[index]} onChange={(event) => setChecks((current) => current.map((value, itemIndex) => itemIndex === index ? event.target.checked : value))} /> {label}</label>)}</div>{saveError && <p className="form-error" role="alert">{saveError}</p>}<div className="form-actions"><button type="button" className="button button-ghost" onClick={() => setStep(2)}>Voltar</button><div><button type="button" disabled={saving} className="button button-ghost" onClick={() => saveProduct(false)}>Salvar rascunho</button><button type="button" disabled={saving} className="button button-primary" onClick={() => saveProduct(true)}>{saving ? "Salvando…" : "Publicar peça"}</button></div></div></section>}
   </div>;
 }

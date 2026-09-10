@@ -7,8 +7,8 @@
 ---
 
 **Project:** Auto Pecas Martins
-**Generated:** 2026-09-10 07:28:09
-**Category:** Automotive/Car Dealership
+**Generated:** 2026-09-10 16:13:34
+**Category:** Analytics Dashboard
 
 ---
 
@@ -18,24 +18,24 @@
 
 | Role | Hex | CSS Variable |
 |------|-----|--------------|
-| Primary | `#1E293B` | `--color-primary` |
-| Secondary | `#334155` | `--color-secondary` |
-| CTA/Accent | `#DC2626` | `--color-cta` |
-| Background | `#F8FAFC` | `--color-background` |
-| Text | `#0F172A` | `--color-text` |
+| Primary | `#0F172A` | `--color-primary` |
+| Secondary | `#1E293B` | `--color-secondary` |
+| CTA/Accent | `#22C55E` | `--color-cta` |
+| Background | `#020617` | `--color-background` |
+| Text | `#F8FAFC` | `--color-text` |
 
-**Color Notes:** Premium dark + action red
+**Color Notes:** Dark bg + green positive indicators
 
 ### Typography
 
-- **Heading Font:** Rubik
-- **Body Font:** Nunito Sans
-- **Mood:** ecommerce, clean, shopping, product, retail, conversion
-- **Google Fonts:** [Rubik + Nunito Sans](https://fonts.google.com/share?selection.family=Nunito+Sans:wght@300;400;500;600;700|Rubik:wght@300;400;500;600;700)
+- **Heading Font:** Fira Code
+- **Body Font:** Fira Sans
+- **Mood:** dashboard, data, analytics, code, technical, precise
+- **Google Fonts:** [Fira Code + Fira Sans](https://fonts.google.com/share?selection.family=Fira+Code:wght@400;500;600;700|Fira+Sans:wght@300;400;500;600;700)
 
 **CSS Import:**
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap');
 ```
 
 ### Spacing Variables
@@ -68,7 +68,7 @@
 ```css
 /* Primary Button */
 .btn-primary {
-  background: #DC2626;
+  background: #22C55E;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -85,8 +85,8 @@
 /* Secondary Button */
 .btn-secondary {
   background: transparent;
-  color: #1E293B;
-  border: 2px solid #1E293B;
+  color: #0F172A;
+  border: 2px solid #0F172A;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
@@ -99,7 +99,7 @@
 
 ```css
 .card {
-  background: #F8FAFC;
+  background: #020617;
   border-radius: 12px;
   padding: 24px;
   box-shadow: var(--shadow-md);
@@ -125,9 +125,9 @@
 }
 
 .input:focus {
-  border-color: #1E293B;
+  border-color: #0F172A;
   outline: none;
-  box-shadow: 0 0 0 3px #1E293B20;
+  box-shadow: 0 0 0 3px #0F172A20;
 }
 ```
 
@@ -153,28 +153,28 @@
 
 ## Style Guidelines
 
-**Style:** Motion-Driven
+**Style:** Data-Dense Dashboard
 
-**Keywords:** Animation-heavy, microinteractions, smooth transitions, scroll effects, parallax, entrance anim, page transitions
+**Keywords:** Multiple charts/widgets, data tables, KPI cards, minimal padding, grid layout, space-efficient, maximum data visibility
 
-**Best For:** Portfolio sites, storytelling platforms, interactive experiences, entertainment apps, creative, SaaS
+**Best For:** Business intelligence dashboards, financial analytics, enterprise reporting, operational dashboards, data warehousing
 
-**Key Effects:** Scroll anim (Intersection Observer), hover (300-400ms), entrance, parallax (3-5 layers), page transitions
+**Key Effects:** Hover tooltips, chart zoom on click, row highlighting on hover, smooth filter animations, data loading spinners
 
 ### Page Pattern
 
-**Pattern Name:** Funnel (3-Step Conversion)
+**Pattern Name:** Portfolio Grid
 
-- **Conversion Strategy:** Progressive disclosure. Show only essential info per step. Use progress indicators. Multiple CTAs.
-- **CTA Placement:** Each step: mini-CTA. Final: main CTA
-- **Section Order:** 1. Hero, 2. Step 1 (problem), 3. Step 2 (solution), 4. Step 3 (action), 5. CTA progression
+- **Conversion Strategy:**  hover overlay info,  lightbox view, Visuals first. Filter by category. Fast loading essential.
+- **CTA Placement:** Project Card Hover + Footer Contact
+- **Section Order:** 1. Hero (Name/Role), 2. Project Grid (Masonry), 3. About/Philosophy, 4. Contact
 
 ---
 
 ## Anti-Patterns (Do NOT Use)
 
-- ❌ Static product pages
-- ❌ Poor UX
+- ❌ Ornate design
+- ❌ No filtering
 
 ### Additional Forbidden Patterns
 
