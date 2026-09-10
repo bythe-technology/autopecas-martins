@@ -1,0 +1,8 @@
+type IconProps = { size?: number; stroke?: number };
+
+export function ArrowRight({ size = 20, stroke = 2 }: IconProps) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>; }
+export function Search({ size = 20, stroke = 2 }: IconProps) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m20 20-4.2-4.2" /></svg>; }
+export function Pin({ size = 20, stroke = 2 }: IconProps) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>; }
+export function Wrench({ size = 20, stroke = 2 }: IconProps) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} aria-hidden="true"><path d="m14.7 6.3 3-3a5 5 0 0 1-6.2 6.2l-7.8 7.8a2.2 2.2 0 1 0 3.1 3.1l7.8-7.8a5 5 0 0 1 6.2-6.2l-3 3" /></svg>; }
+export function Package({ size = 20, stroke = 2 }: IconProps) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" /><path d="m4.4 7.7 7.6 4.4 7.6-4.4M12 12v9" /></svg>; }
+export function ChevronRight({ size = 20, stroke = 2 }: IconProps) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={stroke} aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>; }

@@ -1,0 +1,9 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { SiteHeader } from "@/components/site-header";
+import { WhatsAppLink } from "@/components/whatsapp-link";
+import { ArrowRight, Package } from "@/components/icons";
+import { catalogProducts, formatPrice, getProductBySlug } from "@/lib/catalog";
+
+export function generateStaticParams() { return catalogProducts.map((product) => ({ slug: product.slug })); }
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const product = getProductBySlug(slug); if (!product) notFound(); const message = `Olá! Vi no site a peça ${product.name}, código ${product.code}, anunciada por ${formatPrice(product.priceCents)}. Meu veículo é [modelo/ano]. Gostaria de confirmar aplicação e disponibilidade.`; return <main><SiteHeader /><section className="section product-page"><div className="container"><Link href="/catalogo" className="breadcrumb">Catálogo <ArrowRight size={15} /> {product.category}</Link><div className="product-layout"><div className="product-large-visual"><Package size={72} /><span>Foto da peça em breve</span><small>Foto de referência será adicionada após validação do lote.</small></div><article className="product-summary"><p className="eyebrow">{product.category}</p><h1>{product.name}</h1><p className="product-application">{product.application}</p><div className="price-block"><span>Preço do lote</span><strong>{formatPrice(product.priceCents)}</strong><small>Estoque e aplicação sujeitos à confirmação</small></div><WhatsAppLink message={message} label="Confirmar no WhatsApp" /><dl><div><dt>Código</dt><dd>{product.code}</dd></div><div><dt>Marca</dt><dd>{product.brand ?? "Não informada no lote"}</dd></div><div><dt>Disponibilidade</dt><dd>{product.availability}</dd></div></dl><p className="product-description">{product.description}</p></article></div></div></section></main>; }
