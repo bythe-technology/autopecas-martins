@@ -18,8 +18,11 @@ function createPublicCatalogClient() {
   });
 }
 
-export async function getPublicCatalog(): Promise<CatalogProduct[]> {
-  const { data, error } = await createPublicCatalogClient().rpc("public_catalog_products");
+export async function getPublicCatalog(options: { limit?: number; offset?: number } = {}): Promise<CatalogProduct[]> {
+  const { data, error } = await createPublicCatalogClient().rpc("public_catalog_products_page", {
+    page_limit: Math.min(Math.max(options.limit ?? 24, 1), 60),
+    page_offset: Math.max(options.offset ?? 0, 0),
+  });
   if (error) console.error("public_catalog_products failed:", error.message);
   return error || !data ? catalogProducts : (data as CatalogRow[]).map(toProduct);
 }

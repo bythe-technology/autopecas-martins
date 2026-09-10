@@ -11,7 +11,7 @@ import { getPublicCatalog } from "@/lib/catalog-db";
 import { services, store } from "@/lib/store";
 
 export default async function HomePage() {
-  const featured = await getPublicCatalog();
+  const featured = await getPublicCatalog({ limit: 12 });
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "AutoPartsStore",
