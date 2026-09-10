@@ -38,7 +38,9 @@ Primeiro mês gratuito conforme orientação posterior do usuário; demais mensa
 
 ## Implementação iniciada em 10/09/2026
 
-O repositório agora contém uma aplicação Next.js com página inicial, catálogo filtrável, páginas individuais de peça, chamadas de WhatsApp e seção de serviços de oficina. A interface usa as fotos e a marca enviadas pela cliente; imagens de produtos ficam sinalizadas como pendentes até pesquisa e validação da aplicação.
+O repositório contém uma aplicação Next.js com página inicial, header flutuante responsivo, catálogo filtrável, busca assistida por veículo, liquidações, páginas individuais de peça, atendimento para oficinas e frotas, contato, privacidade e chamadas de WhatsApp. O painel piloto em `/admin` inclui visão geral e cadastro guiado em três etapas. Imagens de produtos ficam sinalizadas como pendentes até pesquisa e validação da aplicação.
+
+Os clientes Supabase ficam em `src/lib/supabase`, e o domínio do catálogo está isolado em `src/modules/catalog`. A vitrine ainda usa o repositório local como fallback até a carga dos produtos aprovados e a ativação do fluxo autenticado do painel.
 
 A fundação multiempresa foi aplicada no projeto Supabase BYTHE, em schema `catalog`: lojas, associações de usuário, categorias, produtos, promoções, imagens, auditoria e bucket privado de staging. As tabelas usam RLS e grants explícitos; nenhum produto, cliente ou conta de loja foi criado nesta etapa. As migrations estão em `supabase/migrations/`.
 

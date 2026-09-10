@@ -5,8 +5,8 @@ import { categories, catalogProducts } from "@/lib/catalog";
 import { ProductCard } from "./product-card";
 import { Search } from "./icons";
 
-export function CatalogView({ initialCategory = "Todas" }: { initialCategory?: string }) {
-  const [query, setQuery] = useState("");
+export function CatalogView({ initialCategory = "Todas", initialQuery = "" }: { initialCategory?: string; initialQuery?: string }) {
+  const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(() => categories.includes(initialCategory as (typeof categories)[number]) ? initialCategory : "Todas");
   const products = useMemo(() => catalogProducts.filter((product) => {
     const normalized = `${product.name} ${product.code} ${product.brand ?? ""} ${product.application}`.toLocaleLowerCase("pt-BR");
