@@ -49,6 +49,7 @@ for row in ROWS:
  text=norm(row["description"]); found=[]
  for make, models in MAKES.items():
   for model, aliases in models.items():
+   if model == "Up" and " pick up " in text: continue
    if any(f" {norm(alias).strip()} " in text for alias in aliases): found.append((make,model))
  start,end=years(row["description"])
  if not found: unmatched.append(row["internal_code"])
