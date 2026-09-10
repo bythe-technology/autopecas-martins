@@ -9,7 +9,8 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const supabase = await createSupabaseServerClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/login");
-  const { data: membership } = await supabase.schema("catalog").from("store_memberships").select("store_id, role, active, must_change_password").eq("user_id", user.id).eq("active", true).limit(1).maybeSingle();
+  const { data: memberships } = await supabase.rpc("get_my_store_membership");
+  const membership = memberships?.[0];
   if (!membership) redirect("/login?erro=sem-acesso");
   if (membership.must_change_password) redirect("/trocar-senha");
   return <AdminShell userEmail={user.email ?? "Usuário autorizado"}>{children}</AdminShell>;

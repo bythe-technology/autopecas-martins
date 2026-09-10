@@ -16,10 +16,10 @@ export default function ChangePasswordPage() {
     const supabase = createSupabaseBrowserClient();
     const { error: passwordError } = await supabase.auth.updateUser({ password });
     if (passwordError) { setError("Não foi possível alterar a senha. Tente novamente."); setLoading(false); return; }
-    const { data: memberships, error: membershipError } = await supabase.schema("catalog").from("store_memberships").select("store_id").eq("active", true).limit(1);
+    const { data: memberships, error: membershipError } = await supabase.rpc("get_my_store_membership");
     const storeId = memberships?.[0]?.store_id;
     if (membershipError || !storeId) { setError("Seu acesso à loja não foi localizado."); setLoading(false); return; }
-    const { error: completionError } = await supabase.schema("catalog").rpc("complete_password_change", { target_store_id: storeId });
+    const { error: completionError } = await supabase.rpc("complete_my_password_change", { target_store_id: storeId });
     if (completionError) { setError("A senha mudou, mas não foi possível concluir a ativação. Entre novamente."); setLoading(false); return; }
     window.location.assign("/admin");
   }
