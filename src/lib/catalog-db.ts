@@ -2,10 +2,12 @@ import { createClient } from "@supabase/supabase-js";
 import { CatalogProduct, catalogProducts } from "@/lib/catalog";
 import { supabasePublicConfig } from "@/lib/supabase/config";
 
-type CatalogRow = { slug: string; name: string; internal_code: string; brand: string | null; category: CatalogProduct["category"]; regular_price_cents: number; availability_status: string; application: string; description?: string; image_url?: string | null };
+type CatalogRow = { slug: string; name: string; internal_code: string; manufacturer_code: string | null; brand: string | null; category: CatalogProduct["category"]; regular_price_cents: number; availability_status: string; application: string; description?: string; image_url?: string | null };
 
 function toProduct(row: CatalogRow): CatalogProduct {
-  const local = catalogProducts.find((item) => item.code === row.internal_code);
+  const local = catalogProducts.find(
+    (item) => item.code === row.internal_code || item.code.toLowerCase() === row.manufacturer_code?.toLowerCase(),
+  );
   return { slug: row.slug, name: row.name, code: row.internal_code, brand: row.brand, category: row.category, priceCents: row.regular_price_cents, availability: row.availability_status === "limited" ? "Últimas unidades" : "Disponível", application: row.application, description: row.description ?? "Produto do lote especial APM1. Confirme aplicação e disponibilidade com nossa equipe.", imageSrc: local?.imageSrc ?? row.image_url ?? undefined, imageNote: local?.imageNote ?? (row.image_url ? "Imagem aprovada" : undefined), fitment: local?.fitment };
 }
 
@@ -19,7 +21,7 @@ function createPublicCatalogClient() {
 }
 
 export async function getPublicCatalog(options: { limit?: number; offset?: number } = {}): Promise<CatalogProduct[]> {
-  const { data, error } = await createPublicCatalogClient().rpc("public_catalog_products_page_v2", {
+  const { data, error } = await createPublicCatalogClient().rpc("public_catalog_products_page_v3", {
     page_limit: Math.min(Math.max(options.limit ?? 24, 1), 60),
     page_offset: Math.max(options.offset ?? 0, 0),
   });
@@ -29,7 +31,7 @@ export async function getPublicCatalog(options: { limit?: number; offset?: numbe
 
 export async function getPublicProduct(slug: string): Promise<CatalogProduct | undefined> {
   const local = catalogProducts.find((item) => item.slug === slug);
-  const { data, error } = await createPublicCatalogClient().rpc("public_catalog_product_v2", { product_slug: slug });
+  const { data, error } = await createPublicCatalogClient().rpc("public_catalog_product_v3", { product_slug: slug });
   if (error) console.error("public_catalog_product failed:", error.message);
   return error || !data?.length ? local : toProduct(data[0] as CatalogRow);
 }
