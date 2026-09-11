@@ -2,26 +2,17 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { catalogProducts } from "@/lib/catalog";
+import type { StockVehicleOption } from "@/lib/catalog-db";
 import { Car, Search } from "./icons";
 
-type StockVehicle = { make: string; model: string; years: number[] };
-
-const stockVehicles: StockVehicle[] = catalogProducts.flatMap((product) => {
-  if (!product.fitment) return [];
-  const { make, models, yearFrom, yearTo } = product.fitment;
-  const years = yearFrom ? Array.from({ length: Math.max(1, (yearTo ?? new Date().getFullYear()) - yearFrom + 1) }, (_, index) => yearFrom + index) : [];
-  return models.map((model) => ({ make, model, years }));
-});
-
-export function VehicleFinder({ compact = false }: { compact?: boolean }) {
+export function VehicleFinder({ compact = false, options }: { compact?: boolean; options: StockVehicleOption[] }) {
   const router = useRouter();
   const [make, setMake] = useState("");
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
-  const makes = useMemo(() => [...new Set(stockVehicles.map((item) => item.make))].sort(), []);
-  const models = useMemo(() => [...new Set(stockVehicles.filter((item) => item.make === make).map((item) => item.model))].sort(), [make]);
-  const years = useMemo(() => [...new Set(stockVehicles.filter((item) => item.make === make && item.model === model).flatMap((item) => item.years))].sort((a, b) => b - a), [make, model]);
+  const makes = useMemo(() => [...new Set(options.map((item) => item.make))].sort(), [options]);
+  const models = useMemo(() => [...new Set(options.filter((item) => item.make === make).map((item) => item.model))].sort(), [make, options]);
+  const years = useMemo(() => [...new Set(options.filter((item) => item.make === make && item.model === model).flatMap((item) => item.year_from ? Array.from({length: Math.max(1,(item.year_to ?? new Date().getFullYear())-item.year_from+1)},(_,index)=>item.year_from!+index) : []))].sort((a,b)=>b-a), [make,model,options]);
 
   function search() {
     const params = new URLSearchParams({ marca: make, modelo: model });
