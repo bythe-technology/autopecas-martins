@@ -1,0 +1,1202 @@
+[
+  {
+    "internal_code": "APM1-0017",
+    "score": 162200,
+    "quantity": 3,
+    "stock_value_cents": 109200
+  },
+  {
+    "internal_code": "APM1-0024",
+    "score": 134900,
+    "quantity": 3,
+    "stock_value_cents": 81900
+  },
+  {
+    "internal_code": "APM1-0206",
+    "score": 121680,
+    "quantity": 2,
+    "stock_value_cents": 69680
+  },
+  {
+    "internal_code": "APM1-0203",
+    "score": 104780,
+    "quantity": 2,
+    "stock_value_cents": 52780
+  },
+  {
+    "internal_code": "APM1-0204",
+    "score": 104780,
+    "quantity": 2,
+    "stock_value_cents": 52780
+  },
+  {
+    "internal_code": "APM1-0020",
+    "score": 94410,
+    "quantity": 9,
+    "stock_value_cents": 85410
+  },
+  {
+    "internal_code": "APM1-0195",
+    "score": 92600,
+    "quantity": 1,
+    "stock_value_cents": 41600
+  },
+  {
+    "internal_code": "APM1-0005",
+    "score": 89180,
+    "quantity": 2,
+    "stock_value_cents": 37180
+  },
+  {
+    "internal_code": "APM1-0190",
+    "score": 88700,
+    "quantity": 1,
+    "stock_value_cents": 37700
+  },
+  {
+    "internal_code": "APM1-0194",
+    "score": 87400,
+    "quantity": 1,
+    "stock_value_cents": 36400
+  },
+  {
+    "internal_code": "APM1-0200",
+    "score": 85580,
+    "quantity": 1,
+    "stock_value_cents": 34580
+  },
+  {
+    "internal_code": "APM1-0001",
+    "score": 84250,
+    "quantity": 5,
+    "stock_value_cents": 29250
+  },
+  {
+    "internal_code": "APM1-0556",
+    "score": 81900,
+    "quantity": 2,
+    "stock_value_cents": 29900
+  },
+  {
+    "internal_code": "APM1-0007",
+    "score": 81550,
+    "quantity": 1,
+    "stock_value_cents": 30550
+  },
+  {
+    "internal_code": "APM1-0210",
+    "score": 81160,
+    "quantity": 1,
+    "stock_value_cents": 30160
+  },
+  {
+    "internal_code": "APM1-0132",
+    "score": 80600,
+    "quantity": 2,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0138",
+    "score": 80600,
+    "quantity": 2,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0139",
+    "score": 80600,
+    "quantity": 2,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0198",
+    "score": 79600,
+    "quantity": 1,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0220",
+    "score": 79600,
+    "quantity": 1,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0308",
+    "score": 79600,
+    "quantity": 1,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0309",
+    "score": 79600,
+    "quantity": 1,
+    "stock_value_cents": 28600
+  },
+  {
+    "internal_code": "APM1-0175",
+    "score": 78300,
+    "quantity": 1,
+    "stock_value_cents": 27300
+  },
+  {
+    "internal_code": "APM1-0213",
+    "score": 78040,
+    "quantity": 1,
+    "stock_value_cents": 27040
+  },
+  {
+    "internal_code": "APM1-0284",
+    "score": 78000,
+    "quantity": 2,
+    "stock_value_cents": 26000
+  },
+  {
+    "internal_code": "APM1-0028",
+    "score": 77400,
+    "quantity": 4,
+    "stock_value_cents": 23400
+  },
+  {
+    "internal_code": "APM1-0287",
+    "score": 75570,
+    "quantity": 1,
+    "stock_value_cents": 24570
+  },
+  {
+    "internal_code": "APM1-0487",
+    "score": 75050,
+    "quantity": 1,
+    "stock_value_cents": 24050
+  },
+  {
+    "internal_code": "APM1-0076",
+    "score": 74400,
+    "quantity": 1,
+    "stock_value_cents": 23400
+  },
+  {
+    "internal_code": "APM1-0368",
+    "score": 73870,
+    "quantity": 11,
+    "stock_value_cents": 12870
+  },
+  {
+    "internal_code": "APM1-0480",
+    "score": 73840,
+    "quantity": 2,
+    "stock_value_cents": 21840
+  },
+  {
+    "internal_code": "APM1-0172",
+    "score": 73100,
+    "quantity": 1,
+    "stock_value_cents": 22100
+  },
+  {
+    "internal_code": "APM1-0018",
+    "score": 72800,
+    "quantity": 2,
+    "stock_value_cents": 20800
+  },
+  {
+    "internal_code": "APM1-0263",
+    "score": 72110,
+    "quantity": 3,
+    "stock_value_cents": 19110
+  },
+  {
+    "internal_code": "APM1-0255",
+    "score": 72060,
+    "quantity": 1,
+    "stock_value_cents": 21060
+  },
+  {
+    "internal_code": "APM1-0256",
+    "score": 72060,
+    "quantity": 1,
+    "stock_value_cents": 21060
+  },
+  {
+    "internal_code": "APM1-0366",
+    "score": 71700,
+    "quantity": 10,
+    "stock_value_cents": 11700
+  },
+  {
+    "internal_code": "APM1-0228",
+    "score": 71540,
+    "quantity": 1,
+    "stock_value_cents": 20540
+  },
+  {
+    "internal_code": "APM1-0270",
+    "score": 71500,
+    "quantity": 2,
+    "stock_value_cents": 19500
+  },
+  {
+    "internal_code": "APM1-0625",
+    "score": 71500,
+    "quantity": 2,
+    "stock_value_cents": 19500
+  },
+  {
+    "internal_code": "APM1-0628",
+    "score": 71500,
+    "quantity": 2,
+    "stock_value_cents": 19500
+  },
+  {
+    "internal_code": "APM1-0630",
+    "score": 71500,
+    "quantity": 2,
+    "stock_value_cents": 19500
+  },
+  {
+    "internal_code": "APM1-0180",
+    "score": 71150,
+    "quantity": 1,
+    "stock_value_cents": 20150
+  },
+  {
+    "internal_code": "APM1-0181",
+    "score": 71150,
+    "quantity": 1,
+    "stock_value_cents": 20150
+  },
+  {
+    "internal_code": "APM1-0624",
+    "score": 70980,
+    "quantity": 2,
+    "stock_value_cents": 18980
+  },
+  {
+    "internal_code": "APM1-0015",
+    "score": 70500,
+    "quantity": 1,
+    "stock_value_cents": 19500
+  },
+  {
+    "internal_code": "APM1-0207",
+    "score": 69980,
+    "quantity": 1,
+    "stock_value_cents": 18980
+  },
+  {
+    "internal_code": "APM1-0108",
+    "score": 69680,
+    "quantity": 2,
+    "stock_value_cents": 17680
+  },
+  {
+    "internal_code": "APM1-0244",
+    "score": 69070,
+    "quantity": 1,
+    "stock_value_cents": 18070
+  },
+  {
+    "internal_code": "APM1-0245",
+    "score": 69070,
+    "quantity": 1,
+    "stock_value_cents": 18070
+  },
+  {
+    "internal_code": "APM1-0014",
+    "score": 68680,
+    "quantity": 1,
+    "stock_value_cents": 17680
+  },
+  {
+    "internal_code": "APM1-0238",
+    "score": 68420,
+    "quantity": 1,
+    "stock_value_cents": 17420
+  },
+  {
+    "internal_code": "APM1-0029",
+    "score": 68380,
+    "quantity": 2,
+    "stock_value_cents": 16380
+  },
+  {
+    "internal_code": "APM1-0258",
+    "score": 68290,
+    "quantity": 1,
+    "stock_value_cents": 17290
+  },
+  {
+    "internal_code": "APM1-0470",
+    "score": 67900,
+    "quantity": 1,
+    "stock_value_cents": 16900
+  },
+  {
+    "internal_code": "APM1-0471",
+    "score": 67900,
+    "quantity": 1,
+    "stock_value_cents": 16900
+  },
+  {
+    "internal_code": "APM1-0360",
+    "score": 67850,
+    "quantity": 23,
+    "stock_value_cents": 44850
+  },
+  {
+    "internal_code": "APM1-0072",
+    "score": 67600,
+    "quantity": 2,
+    "stock_value_cents": 15600
+  },
+  {
+    "internal_code": "APM1-0003",
+    "score": 67250,
+    "quantity": 1,
+    "stock_value_cents": 16250
+  },
+  {
+    "internal_code": "APM1-0004",
+    "score": 67250,
+    "quantity": 1,
+    "stock_value_cents": 16250
+  },
+  {
+    "internal_code": "APM1-0008",
+    "score": 67250,
+    "quantity": 1,
+    "stock_value_cents": 16250
+  },
+  {
+    "internal_code": "APM1-0472",
+    "score": 67250,
+    "quantity": 1,
+    "stock_value_cents": 16250
+  },
+  {
+    "internal_code": "APM1-0547",
+    "score": 67250,
+    "quantity": 1,
+    "stock_value_cents": 16250
+  },
+  {
+    "internal_code": "APM1-0548",
+    "score": 67250,
+    "quantity": 1,
+    "stock_value_cents": 16250
+  },
+  {
+    "internal_code": "APM1-0201",
+    "score": 66860,
+    "quantity": 1,
+    "stock_value_cents": 15860
+  },
+  {
+    "internal_code": "APM1-0192",
+    "score": 66600,
+    "quantity": 1,
+    "stock_value_cents": 15600
+  },
+  {
+    "internal_code": "APM1-0193",
+    "score": 66600,
+    "quantity": 1,
+    "stock_value_cents": 15600
+  },
+  {
+    "internal_code": "APM1-0137",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0140",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0144",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0145",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0151",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0153",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0154",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0155",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0156",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0158",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0162",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0163",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0164",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0165",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0168",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0169",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0170",
+    "score": 65300,
+    "quantity": 1,
+    "stock_value_cents": 14300
+  },
+  {
+    "internal_code": "APM1-0239",
+    "score": 65170,
+    "quantity": 1,
+    "stock_value_cents": 14170
+  },
+  {
+    "internal_code": "APM1-0484",
+    "score": 65170,
+    "quantity": 1,
+    "stock_value_cents": 14170
+  },
+  {
+    "internal_code": "APM1-0485",
+    "score": 65170,
+    "quantity": 1,
+    "stock_value_cents": 14170
+  },
+  {
+    "internal_code": "APM1-0474",
+    "score": 64910,
+    "quantity": 1,
+    "stock_value_cents": 13910
+  },
+  {
+    "internal_code": "APM1-0212",
+    "score": 64130,
+    "quantity": 1,
+    "stock_value_cents": 13130
+  },
+  {
+    "internal_code": "APM1-0012",
+    "score": 64000,
+    "quantity": 1,
+    "stock_value_cents": 13000
+  },
+  {
+    "internal_code": "APM1-0013",
+    "score": 64000,
+    "quantity": 1,
+    "stock_value_cents": 13000
+  },
+  {
+    "internal_code": "APM1-0179",
+    "score": 64000,
+    "quantity": 1,
+    "stock_value_cents": 13000
+  },
+  {
+    "internal_code": "APM1-0555",
+    "score": 64000,
+    "quantity": 1,
+    "stock_value_cents": 13000
+  },
+  {
+    "internal_code": "APM1-0032",
+    "score": 63960,
+    "quantity": 2,
+    "stock_value_cents": 11960
+  },
+  {
+    "internal_code": "APM1-0197",
+    "score": 63960,
+    "quantity": 2,
+    "stock_value_cents": 11960
+  },
+  {
+    "internal_code": "APM1-0090",
+    "score": 63880,
+    "quantity": 4,
+    "stock_value_cents": 9880
+  },
+  {
+    "internal_code": "APM1-0246",
+    "score": 63740,
+    "quantity": 1,
+    "stock_value_cents": 12740
+  },
+  {
+    "internal_code": "APM1-0082",
+    "score": 63700,
+    "quantity": 2,
+    "stock_value_cents": 11700
+  },
+  {
+    "internal_code": "APM1-0215",
+    "score": 63700,
+    "quantity": 2,
+    "stock_value_cents": 11700
+  },
+  {
+    "internal_code": "APM1-0216",
+    "score": 63700,
+    "quantity": 2,
+    "stock_value_cents": 11700
+  },
+  {
+    "internal_code": "APM1-0217",
+    "score": 63700,
+    "quantity": 2,
+    "stock_value_cents": 11700
+  },
+  {
+    "internal_code": "APM1-0191",
+    "score": 63350,
+    "quantity": 1,
+    "stock_value_cents": 12350
+  },
+  {
+    "internal_code": "APM1-0466",
+    "score": 63180,
+    "quantity": 2,
+    "stock_value_cents": 11180
+  },
+  {
+    "internal_code": "APM1-0079",
+    "score": 63090,
+    "quantity": 1,
+    "stock_value_cents": 12090
+  },
+  {
+    "internal_code": "APM1-0248",
+    "score": 63090,
+    "quantity": 1,
+    "stock_value_cents": 12090
+  },
+  {
+    "internal_code": "APM1-0365",
+    "score": 63020,
+    "quantity": 6,
+    "stock_value_cents": 7020
+  },
+  {
+    "internal_code": "APM1-0105",
+    "score": 62920,
+    "quantity": 2,
+    "stock_value_cents": 10920
+  },
+  {
+    "internal_code": "APM1-0106",
+    "score": 62920,
+    "quantity": 2,
+    "stock_value_cents": 10920
+  },
+  {
+    "internal_code": "APM1-0486",
+    "score": 62570,
+    "quantity": 1,
+    "stock_value_cents": 11570
+  },
+  {
+    "internal_code": "APM1-0048",
+    "score": 62440,
+    "quantity": 1,
+    "stock_value_cents": 11440
+  },
+  {
+    "internal_code": "APM1-0259",
+    "score": 62440,
+    "quantity": 1,
+    "stock_value_cents": 11440
+  },
+  {
+    "internal_code": "APM1-0240",
+    "score": 62180,
+    "quantity": 1,
+    "stock_value_cents": 11180
+  },
+  {
+    "internal_code": "APM1-0489",
+    "score": 62180,
+    "quantity": 1,
+    "stock_value_cents": 11180
+  },
+  {
+    "internal_code": "APM1-0188",
+    "score": 62050,
+    "quantity": 1,
+    "stock_value_cents": 11050
+  },
+  {
+    "internal_code": "APM1-0578",
+    "score": 61800,
+    "quantity": 4,
+    "stock_value_cents": 7800
+  },
+  {
+    "internal_code": "APM1-0261",
+    "score": 61400,
+    "quantity": 1,
+    "stock_value_cents": 10400
+  },
+  {
+    "internal_code": "APM1-0273",
+    "score": 61400,
+    "quantity": 1,
+    "stock_value_cents": 10400
+  },
+  {
+    "internal_code": "APM1-0311",
+    "score": 61400,
+    "quantity": 1,
+    "stock_value_cents": 10400
+  },
+  {
+    "internal_code": "APM1-0094",
+    "score": 61140,
+    "quantity": 1,
+    "stock_value_cents": 10140
+  },
+  {
+    "internal_code": "APM1-0260",
+    "score": 61140,
+    "quantity": 1,
+    "stock_value_cents": 10140
+  },
+  {
+    "internal_code": "APM1-0490",
+    "score": 61140,
+    "quantity": 1,
+    "stock_value_cents": 10140
+  },
+  {
+    "internal_code": "APM1-0209",
+    "score": 60880,
+    "quantity": 1,
+    "stock_value_cents": 9880
+  },
+  {
+    "internal_code": "APM1-0249",
+    "score": 60880,
+    "quantity": 1,
+    "stock_value_cents": 9880
+  },
+  {
+    "internal_code": "APM1-0251",
+    "score": 60880,
+    "quantity": 1,
+    "stock_value_cents": 9880
+  },
+  {
+    "internal_code": "APM1-0252",
+    "score": 60880,
+    "quantity": 1,
+    "stock_value_cents": 9880
+  },
+  {
+    "internal_code": "APM1-0459",
+    "score": 60760,
+    "quantity": 4,
+    "stock_value_cents": 6760
+  },
+  {
+    "internal_code": "APM1-0568",
+    "score": 60760,
+    "quantity": 4,
+    "stock_value_cents": 6760
+  },
+  {
+    "internal_code": "APM1-0271",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0306",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0592",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0593",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0623",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0626",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0627",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0631",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0632",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0633",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0635",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0636",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0637",
+    "score": 60750,
+    "quantity": 1,
+    "stock_value_cents": 9750
+  },
+  {
+    "internal_code": "APM1-0250",
+    "score": 60360,
+    "quantity": 1,
+    "stock_value_cents": 9360
+  },
+  {
+    "internal_code": "APM1-0042",
+    "score": 60320,
+    "quantity": 2,
+    "stock_value_cents": 8320
+  },
+  {
+    "internal_code": "APM1-0549",
+    "score": 60320,
+    "quantity": 2,
+    "stock_value_cents": 8320
+  },
+  {
+    "internal_code": "APM1-0550",
+    "score": 60320,
+    "quantity": 2,
+    "stock_value_cents": 8320
+  },
+  {
+    "internal_code": "APM1-0501",
+    "score": 60240,
+    "quantity": 4,
+    "stock_value_cents": 6240
+  },
+  {
+    "internal_code": "APM1-0274",
+    "score": 60230,
+    "quantity": 1,
+    "stock_value_cents": 9230
+  },
+  {
+    "internal_code": "APM1-0040",
+    "score": 60100,
+    "quantity": 1,
+    "stock_value_cents": 9100
+  },
+  {
+    "internal_code": "APM1-0178",
+    "score": 60100,
+    "quantity": 1,
+    "stock_value_cents": 9100
+  },
+  {
+    "internal_code": "APM1-0511",
+    "score": 60100,
+    "quantity": 1,
+    "stock_value_cents": 9100
+  },
+  {
+    "internal_code": "APM1-0237",
+    "score": 59970,
+    "quantity": 1,
+    "stock_value_cents": 8970
+  },
+  {
+    "internal_code": "APM1-0276",
+    "score": 59710,
+    "quantity": 1,
+    "stock_value_cents": 8710
+  },
+  {
+    "internal_code": "APM1-0236",
+    "score": 59580,
+    "quantity": 1,
+    "stock_value_cents": 8580
+  },
+  {
+    "internal_code": "APM1-0034",
+    "score": 59320,
+    "quantity": 1,
+    "stock_value_cents": 8320
+  },
+  {
+    "internal_code": "APM1-0585",
+    "score": 59280,
+    "quantity": 2,
+    "stock_value_cents": 7280
+  },
+  {
+    "internal_code": "APM1-0006",
+    "score": 59200,
+    "quantity": 2,
+    "stock_value_cents": 57200
+  },
+  {
+    "internal_code": "APM1-0230",
+    "score": 59060,
+    "quantity": 1,
+    "stock_value_cents": 8060
+  },
+  {
+    "internal_code": "APM1-0233",
+    "score": 59060,
+    "quantity": 1,
+    "stock_value_cents": 8060
+  },
+  {
+    "internal_code": "APM1-0254",
+    "score": 59060,
+    "quantity": 1,
+    "stock_value_cents": 8060
+  },
+  {
+    "internal_code": "APM1-0211",
+    "score": 58930,
+    "quantity": 1,
+    "stock_value_cents": 7930
+  },
+  {
+    "internal_code": "APM1-0521",
+    "score": 58760,
+    "quantity": 2,
+    "stock_value_cents": 6760
+  },
+  {
+    "internal_code": "APM1-0247",
+    "score": 58670,
+    "quantity": 1,
+    "stock_value_cents": 7670
+  },
+  {
+    "internal_code": "APM1-0551",
+    "score": 58670,
+    "quantity": 1,
+    "stock_value_cents": 7670
+  },
+  {
+    "internal_code": "APM1-0272",
+    "score": 58540,
+    "quantity": 1,
+    "stock_value_cents": 7540
+  },
+  {
+    "internal_code": "APM1-0468",
+    "score": 58540,
+    "quantity": 1,
+    "stock_value_cents": 7540
+  },
+  {
+    "internal_code": "APM1-0469",
+    "score": 58540,
+    "quantity": 1,
+    "stock_value_cents": 7540
+  },
+  {
+    "internal_code": "APM1-0522",
+    "score": 58540,
+    "quantity": 1,
+    "stock_value_cents": 7540
+  },
+  {
+    "internal_code": "APM1-0481",
+    "score": 58150,
+    "quantity": 1,
+    "stock_value_cents": 7150
+  },
+  {
+    "internal_code": "APM1-0482",
+    "score": 58150,
+    "quantity": 1,
+    "stock_value_cents": 7150
+  },
+  {
+    "internal_code": "APM1-0508",
+    "score": 58020,
+    "quantity": 1,
+    "stock_value_cents": 7020
+  },
+  {
+    "internal_code": "APM1-0458",
+    "score": 57980,
+    "quantity": 2,
+    "stock_value_cents": 5980
+  },
+  {
+    "internal_code": "APM1-0464",
+    "score": 57980,
+    "quantity": 2,
+    "stock_value_cents": 5980
+  },
+  {
+    "internal_code": "APM1-0093",
+    "score": 57760,
+    "quantity": 1,
+    "stock_value_cents": 6760
+  },
+  {
+    "internal_code": "APM1-0202",
+    "score": 57760,
+    "quantity": 1,
+    "stock_value_cents": 6760
+  },
+  {
+    "internal_code": "APM1-0312",
+    "score": 57760,
+    "quantity": 1,
+    "stock_value_cents": 6760
+  },
+  {
+    "internal_code": "APM1-0262",
+    "score": 57630,
+    "quantity": 1,
+    "stock_value_cents": 6630
+  },
+  {
+    "internal_code": "APM1-0053",
+    "score": 57500,
+    "quantity": 1,
+    "stock_value_cents": 6500
+  },
+  {
+    "internal_code": "APM1-0185",
+    "score": 57500,
+    "quantity": 1,
+    "stock_value_cents": 6500
+  },
+  {
+    "internal_code": "APM1-0232",
+    "score": 57500,
+    "quantity": 1,
+    "stock_value_cents": 6500
+  },
+  {
+    "internal_code": "APM1-0491",
+    "score": 57500,
+    "quantity": 1,
+    "stock_value_cents": 6500
+  },
+  {
+    "internal_code": "APM1-0509",
+    "score": 56980,
+    "quantity": 1,
+    "stock_value_cents": 5980
+  },
+  {
+    "internal_code": "APM1-0022",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0037",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0052",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0058",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0182",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0208",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0218",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0219",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0221",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0227",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0231",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0264",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0265",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0275",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0465",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0513",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0606",
+    "score": 56850,
+    "quantity": 1,
+    "stock_value_cents": 5850
+  },
+  {
+    "internal_code": "APM1-0199",
+    "score": 56820,
+    "quantity": 3,
+    "stock_value_cents": 53820
+  },
+  {
+    "internal_code": "APM1-0603",
+    "score": 56680,
+    "quantity": 2,
+    "stock_value_cents": 4680
+  },
+  {
+    "internal_code": "APM1-0557",
+    "score": 56460,
+    "quantity": 1,
+    "stock_value_cents": 5460
+  }
+]
