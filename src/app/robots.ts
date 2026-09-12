@@ -1,5 +1,10 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
-  return { rules: { userAgent: "*", allow: "/", disallow: ["/admin/"] }, sitemap: "https://autopecasmartins.com.br/sitemap.xml" };
+  return {
+    rules: { userAgent: "*", allow: "/", disallow: ["/admin/", "/login", "/trocar-senha", "/api/"] },
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
+  };
 }

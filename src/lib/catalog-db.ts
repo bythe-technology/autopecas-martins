@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { cache } from "react";
 import { CatalogProduct, catalogProducts } from "@/lib/catalog";
 import { supabasePublicConfig } from "@/lib/supabase/config";
 
@@ -39,9 +40,9 @@ export async function getStockVehicleOptions(): Promise<StockVehicleOption[]> {
   return error || !data ? [] : data as StockVehicleOption[];
 }
 
-export async function getPublicProduct(slug: string): Promise<CatalogProduct | undefined> {
+export const getPublicProduct = cache(async (slug: string): Promise<CatalogProduct | undefined> => {
   const local = catalogProducts.find((item) => item.slug === slug);
   const { data, error } = await createPublicCatalogClient().rpc("public_catalog_product_v3", { product_slug: slug });
   if (error) console.error("public_catalog_product failed:", error.message);
   return error || !data?.length ? local : toProduct(data[0] as CatalogRow);
-}
+});

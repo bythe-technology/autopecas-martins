@@ -1,9 +1,13 @@
 import type { MetadataRoute } from "next";
-import { catalogProducts } from "@/lib/catalog";
+import { getPublicCatalog } from "@/lib/catalog-db";
+import { siteUrl } from "@/lib/seo";
 
-const baseUrl = "https://autopecasmartins.com.br";
-
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = ["", "/catalogo", "/liquidacoes", "/oficinas-e-frotas", "/contato"];
-  return [...pages.map((path) => ({ url: `${baseUrl}${path}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: path === "" ? 1 : .8 })), ...catalogProducts.map((product) => ({ url: `${baseUrl}/produto/${product.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: .7 }))];
+  const batches = await Promise.all([0, 200, 400, 600].map((offset) => getPublicCatalog({ limit: 200, offset })));
+  const products = [...new Map(batches.flat().map((product) => [product.slug, product])).values()];
+  return [
+    ...pages.map((path) => ({ url: `${siteUrl}${path}`, changeFrequency: "weekly" as const, priority: path === "" ? 1 : .8 })),
+    ...products.map((product) => ({ url: `${siteUrl}/produto/${product.slug}`, changeFrequency: "weekly" as const, priority: .7 })),
+  ];
 }

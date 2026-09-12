@@ -8,7 +8,13 @@ export const store = {
   city: "Jacupiranga",
   state: "SP",
   address: "Av. Hilda Mohring de Macedo, 1309 · Vila Elias",
+  streetAddress: "Avenida Hilda Mohring de Macedo, 1309",
+  neighborhood: "Vila Elias",
+  postalCode: "11940-000",
+  country: "BR",
   region: "Vale do Ribeira",
+  founded: "1971-02-16",
+  instagram: "https://www.instagram.com/autopecas_martinss/",
   hours: ["Segunda a sexta · 8h às 18h", "Sábado · 8h às 12h"],
 } as const;
 
