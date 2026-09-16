@@ -34,6 +34,23 @@ export async function getPublicCatalog(options: { limit?: number; offset?: numbe
   return error || !data ? catalogProducts : (data as CatalogRow[]).map(toProduct);
 }
 
+const PUBLIC_CATALOG_PAGE_SIZE = 200;
+const PUBLIC_CATALOG_OFFSETS = [0, 200, 400, 600] as const;
+
+export async function getAllPublicCatalog(options: { make?: string; model?: string; year?: string } = {}): Promise<CatalogProduct[]> {
+  const pages = await Promise.all(
+    PUBLIC_CATALOG_OFFSETS.map((offset) => getPublicCatalog({
+      ...options,
+      limit: PUBLIC_CATALOG_PAGE_SIZE,
+      offset,
+    })),
+  );
+
+  const uniqueProducts = new Map<string, CatalogProduct>();
+  for (const product of pages.flat()) uniqueProducts.set(product.slug, product);
+  return [...uniqueProducts.values()];
+}
+
 export async function getStockVehicleOptions(): Promise<StockVehicleOption[]> {
   const { data, error } = await createPublicCatalogClient().rpc("public_stock_vehicle_options");
   if (error) console.error("public_stock_vehicle_options failed:", error.message);
