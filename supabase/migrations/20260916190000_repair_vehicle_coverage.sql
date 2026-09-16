@@ -14,7 +14,7 @@ with missing as (
 ), classified as (
   select *,
     case
-      when item_name ~ 'NISSAN|FRONTIER|KICKS|MARCH|SENTRA|VERSA' then 'Nissan'
+      when item_name ~ '\m(NISSAN|FRONTIER|KICKS|MARCH|SENTRA|VERSA)\M' then 'Nissan'
       when item_name ~ 'PEUGEOT|206|207' then 'Peugeot'
       when item_name ~ 'HYUNDAI|HB20' then 'Hyundai'
       when item_name ~ 'RENAULT|CLIO|SCENIC|SCENIX' then 'Renault'
@@ -28,11 +28,11 @@ with missing as (
       else 'Diversos'
     end as vehicle_make,
     case
-      when item_name ~ 'FRONTIER' then 'Frontier'
-      when item_name ~ 'KICKS' then 'Kicks'
-      when item_name ~ 'MARCH' then 'March'
-      when item_name ~ 'SENTRA' then 'Sentra'
-      when item_name ~ 'VERSA' then 'Versa'
+      when item_name ~ '\mFRONTIER\M' then 'Frontier'
+      when item_name ~ '\mKICKS\M' then 'Kicks'
+      when item_name ~ '\mMARCH\M' then 'March'
+      when item_name ~ '\mSENTRA\M' then 'Sentra'
+      when item_name ~ '\mVERSA\M' then 'Versa'
       when item_name ~ '206' then '206'
       when item_name ~ '207' then '207'
       when item_name ~ 'HB20' then 'HB20'
