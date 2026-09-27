@@ -31,6 +31,7 @@ export default async function HomePage() {
         url: siteUrl,
         name: store.name,
         alternateName: [store.shortName, "APM Auto Peças Martins"],
+        description: "Autopeças e oficina em Jacupiranga, SP, com atendimento para o Vale do Ribeira.",
         inLanguage: "pt-BR",
       },
       {
@@ -41,12 +42,14 @@ export default async function HomePage() {
         legalName: "Auto Peças Martins Ltda",
         image: absoluteUrl("/images/fachada-editorial-apm.png"),
         logo: absoluteUrl("/images/logo-apm-clean.png"),
-        telephone: [store.phoneDisplay, store.landlineDisplay],
+        telephone: "+5513996002719",
         taxID: store.cnpj,
         foundingDate: store.founded,
+        priceRange: "$$",
         address: { "@type": "PostalAddress", streetAddress: store.streetAddress, addressLocality: store.city, addressRegion: store.state, postalCode: store.postalCode, addressCountry: store.country },
         areaServed: [{ "@type": "City", name: store.city }, { "@type": "AdministrativeArea", name: store.region }],
         sameAs: [store.instagram],
+        hasMap: "https://www.google.com/maps/search/?api=1&query=Auto%20Pe%C3%A7as%20Martins%2C%20Av.%20Hilda%20Mohring%20de%20Macedo%2C%201309%2C%20Jacupiranga%20-%20SP",
         openingHoursSpecification: [
           { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "18:00" },
           { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:00", closes: "12:00" },

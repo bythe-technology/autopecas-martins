@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   openGraph: { locale: "pt_BR", type: "website", siteName, url: "/", images: [defaultSocialImage] },
   twitter: { card: "summary_large_image", images: [defaultSocialImage.url] },
   formatDetection: { telephone: true, address: true, email: false },
+  verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
