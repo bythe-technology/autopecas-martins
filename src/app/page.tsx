@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LocalDiscovery } from "@/components/local-discovery";
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
 import { SiteFooter } from "@/components/site-footer";
@@ -69,6 +70,7 @@ export default async function HomePage() {
     <section className="trust-strip"><div className="container trust-grid"><div><ShieldCheck /><strong>Aplicação confirmada</strong><span>Conferimos os dados do seu veículo.</span></div><div><Package /><strong>Estoque local</strong><span>Retirada em Jacupiranga após confirmação.</span></div><div><Car /><strong>Peças e oficina</strong><span>Atendimento completo em um só lugar.</span></div><div><Clock /><strong>Resposta humana</strong><span>Fale diretamente com nossa equipe.</span></div></div></section>
     <section className="story section" id="oficina"><div className="container story-grid"><div className="story-image"><Image src="/images/estoque-autopecas-martins.png" alt="Corredor do estoque real da Auto Peças Martins em Jacupiranga" fill sizes="(max-width: 850px) 100vw, 45vw" /></div><div><p className="eyebrow">AUTOPEÇAS EM JACUPIRANGA DESDE 1971</p><h2>Um estoque construído ao longo de décadas.</h2><p>A Auto Peças Martins atende Jacupiranga e todo o Vale do Ribeira com peças para diferentes marcas e modelos, além de serviços de oficina. Se não encontrar no catálogo, conte o que precisa: nossa equipe consulta o estoque e procura uma alternativa.</p><WhatsAppLink message="Olá! Não encontrei a peça que preciso no catálogo. Podem verificar o estoque para mim? Meu veículo é [modelo/ano]." label="Consultar o estoque" /></div></div></section>
     <section className="contact"><div className="container contact-inner"><div><p className="eyebrow">FALE COM QUEM ENTENDE</p><h2>Conte qual é o seu carro.<br />A gente ajuda com a peça.</h2></div><WhatsAppLink message="Olá! Quero consultar uma peça ou serviço da Auto Peças Martins." label="Chamar no WhatsApp" className="button button-light" /></div></section>
+    <LocalDiscovery />
     <SiteFooter />
   </main>;
 }

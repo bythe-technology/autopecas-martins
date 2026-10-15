@@ -5,7 +5,7 @@ import { siteUrl } from "@/lib/seo";
 export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const pages = ["", "/catalogo", "/liquidacoes", "/oficinas-e-frotas", "/contato"];
+  const pages = ["", "/catalogo", "/pecas", "/liquidacoes", "/oficinas-e-frotas", "/contato"];
   const firstPage = await getPublicCatalogPage({ limit: 48 });
   const offsets = Array.from(
     { length: Math.ceil(firstPage.total / 48) },
