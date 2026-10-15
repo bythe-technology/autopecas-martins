@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { PromotionPopup } from "@/components/promotion-popup";
 import { defaultSocialImage, siteName, siteUrl } from "@/lib/seo";
 
-const display = Barlow_Condensed({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-display" });
-const body = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-body" });
+const display = localFont({
+  src: [
+    { path: "./fonts/BarlowCondensed-SemiBold-latin.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/BarlowCondensed-Bold-latin.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/BarlowCondensed-ExtraBold-latin.woff2", weight: "800", style: "normal" },
+  ],
+  variable: "--font-display",
+  display: "swap",
+  fallback: ["Arial Narrow", "Arial", "sans-serif"],
+});
+const body = localFont({
+  src: "./fonts/DMSans-latin.woff2",
+  weight: "400 700",
+  style: "normal",
+  variable: "--font-body",
+  display: "swap",
+  fallback: ["Arial", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
